@@ -48,7 +48,6 @@ class NaiveBayes(object):
             self.d_priors[c] = len(Y[Y==c])/(float(len(Y)))
 
     def predict(self, X):
-        #optimized version
         num_r, num_c = X.shape
         P = np.zeros((num_r, len(self.d_gaussians)))
         for c, d in self.d_gaussians.iteritems():
