@@ -5,7 +5,6 @@ Created on Sat Aug 05 04:42:58 2017
 @author: Jan
 """
 import numpy as np
-import matplotlib.pyplot as plt
 from sortedcontainers import SortedList
 from util import get_MNIST, test_models_classification, test_models_regression
 
@@ -90,13 +89,14 @@ if __name__ == '__main__':
     # create the data
     T = 100
     x_axis = np.linspace(0, 2*np.pi, T)
-    y_axis = np.sin(x_axis)
+    y_axis = np.sin(x_axis)*3
     
     # get the training data
     N = 30
     idx = np.random.choice(T, size=N, replace=False)
-    Xtrain = x_axis[idx].reshape(N, 1)
-    Ytrain = y_axis[idx]
+    Xtrain = x_axis[idx].reshape(N, 1) 
+    Ytrain = y_axis[idx] + np.random.randn(N)
     
     models = [KNN_Regressor(k) for k in xrange(1,6)]
-    test_models_regression(Xtrain, Ytrain, x_axis, y_axis, models)
+    
+    test_models_regression(Xtrain, Ytrain, x_axis, y_axis, models, plot=True)
