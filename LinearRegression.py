@@ -157,7 +157,7 @@ if __name__ == '__main__':
     lasso.fit(data, Y)
     w = lasso.w
     
-    ridge = LinearRegression(L2=1000.0)
+    ridge = LinearRegression(L2=10.0)
     ridge.fit(data, Y)
     w3 = ridge.w
     
