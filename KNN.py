@@ -3,6 +3,9 @@
 Created on Sat Aug 05 04:42:58 2017
 
 @author: Jan
+
+KNN_Classifier
+KNN_Regressor
 """
 import numpy as np
 from sortedcontainers import SortedList
