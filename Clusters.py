@@ -3,6 +3,10 @@
 Created on Fri Aug 11 03:14:01 2017
 
 @author: Jan
+
+KMeans
+SofkKMeans
+GMM
 """
 
 import numpy as np
