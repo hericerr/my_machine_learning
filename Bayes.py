@@ -3,6 +3,10 @@
 Created on Wed May 17 21:04:16 2017
 
 @author: Jan
+
+MaximumLikelyhoodClassifier
+NaiveBayes
+BayesClassifier
 """
 from util import get_MNIST, test_models_classification
 import numpy as np
