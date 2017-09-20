@@ -3,6 +3,8 @@
 Created on Sun May 28 17:29:33 2017
 
 @author: Jan
+
+Perceptron
 """
 import numpy as np
 from util import get_MNIST, test_models_classification
