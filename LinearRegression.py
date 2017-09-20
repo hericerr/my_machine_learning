@@ -3,6 +3,9 @@
 Created on Thu Aug 10 04:09:39 2017
 
 @author: Jan
+
+LinearRegression
+LassoRegression
 """
 import numpy as np
 import matplotlib.pyplot as plt
