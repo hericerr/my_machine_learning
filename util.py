@@ -30,8 +30,6 @@ def get_donut():
     R_inner = 5
     R_outer = 10
 
-    # distance from origin is radius + random normal
-    # angle theta is uniformly distributed between (0, 2pi)
     R1 = np.random.randn(N/2) + R_inner
     theta = 2*np.pi*np.random.random(N/2)
     X_inner = np.concatenate([[R1 * np.cos(theta)], [R1 * np.sin(theta)]]).T
