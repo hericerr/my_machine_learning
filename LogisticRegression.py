@@ -34,14 +34,17 @@ class LogisticRegression(object):
             w += learning_rate*(X0.T.dot(delta) - self.L2*w)
         self.w = w
         
-    def predict(self, X):
+    def predict_proba(self, X):
         N, D = X.shape
         X0 = np.ones((N, D+1))
         X0[:, 1:] = X
         return sigmoid(X0.dot(self.w))
     
+    def predict(self, X):
+        return np.round(self.predict_proba(X))
+    
     def score(self, X, Y):
-        P = np.round(self.predict(X))
+        P = self.predict(X)
         return np.mean(P == Y)
     
 class LogisticLasso(LogisticRegression):
