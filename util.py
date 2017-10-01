@@ -78,7 +78,7 @@ def test_models_regression(Xtrain, Ytrain, x_axis, y_axis, models, plot=True):
         t0 = datetime.now()
         prediction = model.predict(x_axis)
         print "Time to compute predictions:", (datetime.now() - t0)
-        print "Accuracy:", r2_score(y_axis, prediction)
+        print "R_square:", r2_score(y_axis, prediction)
         
         if plot:
             plt.plot(x_axis, prediction)
