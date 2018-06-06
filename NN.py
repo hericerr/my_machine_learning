@@ -11,18 +11,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from util import get_MNIST
 
-X = np.array([[0, 3.5], [1 , 2], [1, 0.5]])
-Y = np.array([1,1,0])
-
-W = np.array([[0.5, 0.1, -0.3], [0.7, -0.3, 0.2]])
-
-b = np.array([0.4, 0.1, 0])
-
-V = np.array([0.8, 0.1, -0.1])
-
-c = 0.2
-
-
 def softmax(x):
     exp = np.exp(x)
     try:
