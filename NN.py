@@ -5,7 +5,7 @@ Created on Wed May 30 20:12:02 2018
 @author: Jan
 
 Python 3.5
-Very simle MLP classifier
+Very simple MLP classifier with one hidden layer only
 """
 import numpy as np
 import matplotlib.pyplot as plt
